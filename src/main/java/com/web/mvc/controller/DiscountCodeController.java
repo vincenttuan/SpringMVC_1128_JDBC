@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,14 +28,16 @@ public class DiscountCodeController {
     public String input(Model model) {
         model.addAttribute("po", new DiscountCode());
         model.addAttribute("list", dao.queryDiscountCode());
+        model.addAttribute("_method", "POST");
         return "discount_code";
     }
     
     @GetMapping("/{code}")
-    public String get(@PathParam("code") String code, Model model) {
+    public String get(@PathVariable("code") String code, Model model) {
         DiscountCode dc = dao.getDiscountCode(code);
         model.addAttribute("po", dc);
         model.addAttribute("list", dao.queryDiscountCode());
+        model.addAttribute("_method", "PUT");
         return "discount_code";
     }
     
@@ -44,8 +47,8 @@ public class DiscountCodeController {
         return "redirect: ./input";
     }
     
-    @PutMapping("/{code}")
-    public String update(@PathParam("code") String code, @ModelAttribute DiscountCode dc) {
+    @PutMapping("/")
+    public String update(@ModelAttribute DiscountCode dc) {
         dao.updateDiscountCode(dc);
         return "redirect: ./input";
     }
