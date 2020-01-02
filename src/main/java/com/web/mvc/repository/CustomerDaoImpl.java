@@ -7,6 +7,7 @@ import com.web.mvc.repository.spec.CustomerDao;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository(value = "customerDao")
@@ -22,7 +23,8 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public List<DiscountCode> queryDiscountCode() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "SELECT * FROM DISCOUNT_CODE";
+        return jdbcTemplate.query(sql, RM.discountCode);
     }
 
     @Override
