@@ -20,14 +20,14 @@
 
                 <div class="content">
                     <h2 class="content-subhead">折扣碼維護</h2>
-                    <form class="pure-form">
+                    <form:form modelAttribute="po" id="myform" method="post" action="${pageContext.request.contextPath}/mvc/discount_code/" class="pure-form">
                         <fieldset>
-                            <input type="text" placeholder="請輸入折扣碼">
-                            <input type="text" placeholder="請輸入折扣">
+                            <form:input path="discountCode" placeholder="請輸入折扣碼" />
+                            <form:input path="rate" placeholder="請輸入折扣" />
                             <button type="button" class="pure-button pure-button-primary">add</button>
                             <button type="reset" class="pure-button pure-button-primary">reset</button>
                         </fieldset>
-                    </form>
+                    </form:form>
                     <h2 class="content-subhead">折扣碼列表</h2>
                     <table class="pure-table pure-table-bordered">
                         <thead>

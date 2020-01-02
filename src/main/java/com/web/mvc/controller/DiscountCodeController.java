@@ -1,6 +1,7 @@
 package com.web.mvc.controller;
 
 
+import com.web.mvc.entity.DiscountCode;
 import com.web.mvc.repository.spec.CustomerDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,6 +19,7 @@ public class DiscountCodeController {
     
     @RequestMapping("/input")
     public String input(Model model) {
+        model.addAttribute("po", new DiscountCode());
         model.addAttribute("list", dao.queryDiscountCode());
         return "discount_code";
     }
