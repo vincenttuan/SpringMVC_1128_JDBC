@@ -7,6 +7,7 @@ public class RM {
     static RowMapper<DiscountCode> discountCode = (rs, i) -> {
         DiscountCode dc = new DiscountCode();
         dc.setDiscountCode(rs.getString("DISCOUNT_CODE"));
+        dc.setRate(rs.getDouble("RATE"));
         return dc;
     };
     
