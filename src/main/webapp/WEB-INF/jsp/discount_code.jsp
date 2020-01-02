@@ -1,25 +1,55 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html>
-<head>
-    <%@include file="fragment/head.jspf" %>
-</head>
-<body>
-<div id="layout">
-    <!-- Menu  -->
-    <%@include file="fragment/menu.jspf" %>
-    <!-- Body -->
-    <div id="main">
-        <div class="header">
-            <h1>Discount Code</h1>
-            <h2>A subtitle for your page goes here</h2>
-        </div>
+    <head>
+        <%@include file="fragment/head.jspf" %>
+    </head>
+    <body>
+        <div id="layout">
+            <!-- Menu  -->
+            <%@include file="fragment/menu.jspf" %>
+            <!-- Body -->
+            <div id="main">
+                <div class="header">
+                    <h1>Discount Code</h1>
+                    <h2>A subtitle for your page goes here</h2>
+                </div>
 
-        <div class="content">
-            <h2 class="content-subhead">How to use this layout</h2>
-            ${list}
+                <div class="content">
+                    <h2 class="content-subhead">折扣碼維護</h2>
+                    <form class="pure-form">
+                        <fieldset>
+                            <input type="text" placeholder="請輸入折扣碼">
+                            <input type="text" placeholder="請輸入折扣">
+                            <button type="button" class="pure-button pure-button-primary">add</button>
+                            <button type="reset" class="pure-button pure-button-primary">reset</button>
+                        </fieldset>
+                    </form>
+                    <h2 class="content-subhead">折扣碼列表</h2>
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <tr>
+                                <th>刪除</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <c:forEach var="dc" items="${list}">
+                                <tr>
+                                    <td><button type="button" class="pure-button pure-button-primary">刪除</button></td>
+                                    <td><a href="#">${dc.discountCode}</a></td>
+                                    <td>${dc.rate}</td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
