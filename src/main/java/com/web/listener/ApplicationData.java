@@ -18,7 +18,7 @@ public class ApplicationData implements ServletContextListener {
     public void contextInitialized(ServletContextEvent event) {
         event.getServletContext().setAttribute("menus", menus);
     }
-
+    
     @Override
     public void contextDestroyed(ServletContextEvent event) {
         
