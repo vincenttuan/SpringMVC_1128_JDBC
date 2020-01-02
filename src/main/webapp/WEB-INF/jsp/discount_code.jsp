@@ -24,7 +24,7 @@
                         <fieldset>
                             <form:input path="discountCode" placeholder="請輸入折扣碼" />
                             <form:input path="rate" placeholder="請輸入折扣" />
-                            <button type="button" class="pure-button pure-button-primary">add</button>
+                            <button type="submit" class="pure-button pure-button-primary">add</button>
                             <button type="reset" class="pure-button pure-button-primary">reset</button>
                         </fieldset>
                     </form:form>
