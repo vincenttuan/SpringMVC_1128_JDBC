@@ -54,7 +54,7 @@ public class DiscountCodeController {
     }
     
     @DeleteMapping("/{code}")
-    public String delete(@PathParam("code") String code) {
+    public String delete(@PathVariable("code") String code) {
         dao.deleteDiscountCode(code);
         return "redirect: ./input";
     }
