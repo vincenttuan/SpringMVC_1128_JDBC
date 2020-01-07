@@ -12,6 +12,7 @@ public class ApplicationData implements ServletContextListener {
     static {
         menus.put("discount_code", new String[]{"mvc/discount_code/input", "折扣碼"});
         menus.put("micro_market", new String[]{"mvc/micro_market/input", "市場區域"});
+        menus.put("customer", new String[]{"mvc/customer/input", "客戶資料"});
     }
 
     @Override

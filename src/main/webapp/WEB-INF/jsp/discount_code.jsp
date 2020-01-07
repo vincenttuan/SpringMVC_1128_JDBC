@@ -50,11 +50,11 @@
                         </thead>
 
                         <tbody>
-                            <c:forEach var="dc" items="${list}">
+                            <c:forEach var="item" items="${list}">
                                 <tr>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${dc.discountCode}" class="delete">刪除</a></td>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${dc.discountCode}">${dc.discountCode}</a></td>
-                                    <td>${dc.rate}</td>
+                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}" class="delete">刪除</a></td>
+                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}">${item.discountCode}</a></td>
+                                    <td>${item.rate}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>

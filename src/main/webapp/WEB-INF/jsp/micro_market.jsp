@@ -54,13 +54,13 @@
                         </thead>
 
                         <tbody>
-                            <c:forEach var="mm" items="${list}">
+                            <c:forEach var="item" items="${list}">
                                 <tr>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/micro_market/${mm.zipCode}" class="delete">刪除</a></td>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/micro_market/${mm.zipCode}">${mm.zipCode}</a></td>
-                                    <td>${mm.radius}</td>
-                                    <td>${mm.areaLength}</td>
-                                    <td>${mm.areaWidth}</td>
+                                    <td><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zipCode}" class="delete">刪除</a></td>
+                                    <td><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zipCode}">${item.zipCode}</a></td>
+                                    <td>${item.radius}</td>
+                                    <td>${item.areaLength}</td>
+                                    <td>${item.areaWidth}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>
