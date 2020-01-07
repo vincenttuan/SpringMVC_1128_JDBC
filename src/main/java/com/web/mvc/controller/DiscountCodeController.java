@@ -43,19 +43,19 @@ public class DiscountCodeController {
     @PostMapping("/")
     public String save(@ModelAttribute DiscountCode dc) {
         dao.saveDiscountCode(dc);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     @PutMapping("/")
     public String update(@ModelAttribute DiscountCode dc) {
         dao.updateDiscountCode(dc);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     @DeleteMapping("/{code}")
     public String delete(@PathVariable("code") String code) {
         dao.deleteDiscountCode(code);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     

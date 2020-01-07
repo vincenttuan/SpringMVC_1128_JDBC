@@ -46,19 +46,19 @@ public class CustomerController {
     @PostMapping("/")
     public String save(@ModelAttribute Customer customer) {
         dao.saveCustomer(customer);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     @PutMapping("/")
     public String update(@ModelAttribute Customer customer) {
         dao.updateCustomer(customer);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") Integer id) {
         dao.deleteCustomer(id);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     

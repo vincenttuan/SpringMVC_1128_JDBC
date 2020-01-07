@@ -43,19 +43,19 @@ public class MicroMarketController {
     @PostMapping("/")
     public String save(@ModelAttribute MicroMarket mm) {
         dao.saveMicroMarket(mm);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     @PutMapping("/")
     public String update(@ModelAttribute MicroMarket mm) {
         dao.updateMicroMarket(mm);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
     @DeleteMapping("/{code}")
     public String delete(@PathVariable("code") String code) {
         dao.deleteMicroMarket(code);
-        return "redirect: ./input";
+        return "redirect:./input";
     }
     
 }
