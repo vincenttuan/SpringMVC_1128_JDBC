@@ -55,7 +55,7 @@ public class CustomerController {
         return "redirect: ./input";
     }
     
-    @DeleteMapping("/{code}")
+    @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") Integer id) {
         dao.deleteCustomer(id);
         return "redirect: ./input";
