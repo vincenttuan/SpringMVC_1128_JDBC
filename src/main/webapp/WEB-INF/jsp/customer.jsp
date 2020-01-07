@@ -40,8 +40,14 @@
                                         <tr>
                                             <td valign="top" style="padding: 5px"> 
                                                 <form:input path="customerId" placeholder="customerId" /><p/>
-                                                <form:input path="discountCode" placeholder="discountCode"  /><p/>
-                                                <form:input path="zip" placeholder="zip" /><p/>
+                                                <form:select path="discountCode" 
+                                                             items="${list_dc}" 
+                                                             itemLabel="label" 
+                                                             itemValue="discountCode"/><p/>
+                                                <form:select path="zip" 
+                                                             items="${list_mm}" 
+                                                             itemLabel="zipCode" 
+                                                             itemValue="zipCode"/><p/>
                                                 <form:input path="name" placeholder="name" />
                                             </td>
                                             <td valign="top" style="padding: 5px">

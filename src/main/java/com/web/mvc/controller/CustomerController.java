@@ -28,6 +28,8 @@ public class CustomerController {
     public String input(Model model) {
         model.addAttribute("po", new Customer());
         model.addAttribute("list", dao.queryCustomer());
+        model.addAttribute("list_dc", dao.queryDiscountCode());
+        model.addAttribute("list_mm", dao.queryMicroMarket());
         model.addAttribute("_method", "POST");
         return "customer";
     }
@@ -37,6 +39,8 @@ public class CustomerController {
         Customer customer = dao.getCustomer(id);
         model.addAttribute("po", customer);
         model.addAttribute("list", dao.queryCustomer());
+        model.addAttribute("list_dc", dao.queryDiscountCode());
+        model.addAttribute("list_mm", dao.queryMicroMarket());
         model.addAttribute("_method", "PUT");
         return "customer";
     }
