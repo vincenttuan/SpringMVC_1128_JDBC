@@ -99,10 +99,10 @@
                                         <tbody>
                                             <c:forEach var="item" items="${list}">
                                                 <tr>
-                                                    <td><a href="${pageContext.request.contextPath}/mvc/customer/${item.customerId}" class="delete">刪除</a></td>
-                                                    <td><a href="${pageContext.request.contextPath}/mvc/customer/${item.customerId}">${item.customerId}</a></td>
-                                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}">${item.discountCode}</a></td>
-                                                    <td>${item.zip}</td>
+                                                    <td title="按我一下可刪除"><a href="${pageContext.request.contextPath}/mvc/customer/${item.customerId}" class="delete">刪除</a></td>
+                                                    <td title="按我一下可修改"><a href="${pageContext.request.contextPath}/mvc/customer/${item.customerId}">${item.customerId}</a></td>
+                                                    <td title="按我一下可連結優惠碼頁面"><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}">${item.discountCode}</a></td>
+                                                    <td title="按我一下可連結市場區域頁面"><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zip}">${item.zip}</a></td>
                                                     <td>${item.name}</td>
                                                     <td>${item.addressline1}</td>
                                                     <td>${item.addressline2}</td>

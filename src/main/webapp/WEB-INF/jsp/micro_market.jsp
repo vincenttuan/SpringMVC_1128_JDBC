@@ -56,8 +56,8 @@
                         <tbody>
                             <c:forEach var="item" items="${list}">
                                 <tr>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zipCode}" class="delete">刪除</a></td>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zipCode}">${item.zipCode}</a></td>
+                                    <td title="按我一下可刪除"><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zipCode}" class="delete">刪除</a></td>
+                                    <td title="按我一下可修改"><a href="${pageContext.request.contextPath}/mvc/micro_market/${item.zipCode}">${item.zipCode}</a></td>
                                     <td>${item.radius}</td>
                                     <td>${item.areaLength}</td>
                                     <td>${item.areaWidth}</td>

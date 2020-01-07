@@ -52,8 +52,8 @@
                         <tbody>
                             <c:forEach var="item" items="${list}">
                                 <tr>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}" class="delete">刪除</a></td>
-                                    <td><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}">${item.discountCode}</a></td>
+                                    <td title="按我一下可刪除"><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}" class="delete">刪除</a></td>
+                                    <td title="按我一下可修改"><a href="${pageContext.request.contextPath}/mvc/discount_code/${item.discountCode}">${item.discountCode}</a></td>
                                     <td>${item.rate}</td>
                                 </tr>
                             </c:forEach>
