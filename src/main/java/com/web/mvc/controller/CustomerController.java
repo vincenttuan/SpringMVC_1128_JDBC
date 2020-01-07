@@ -1,8 +1,6 @@
 package com.web.mvc.controller;
 
-
 import com.web.mvc.entity.Customer;
-import com.web.mvc.entity.DiscountCode;
 import com.web.mvc.repository.spec.CustomerDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -58,8 +56,8 @@ public class CustomerController {
     }
     
     @DeleteMapping("/{code}")
-    public String delete(@PathVariable("code") String code) {
-        dao.deleteDiscountCode(code);
+    public String delete(@PathVariable("id") Integer id) {
+        dao.deleteCustomer(id);
         return "redirect: ./input";
     }
     
