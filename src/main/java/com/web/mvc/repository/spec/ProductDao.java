@@ -3,7 +3,7 @@ package com.web.mvc.repository.spec;
 import com.web.mvc.entity.Product;
 import java.util.List;
 
-public interface ProductDao {
+public interface ProductDao extends ProductCodeDao, ManufacturerDao {
     List<Product> queryProduct();
     Product getProduct(Integer id);
     void saveProduct(Product p);
