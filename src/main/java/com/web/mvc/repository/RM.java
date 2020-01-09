@@ -6,7 +6,9 @@ import com.web.mvc.entity.Manufacturer;
 import com.web.mvc.entity.MicroMarket;
 import com.web.mvc.entity.Product;
 import com.web.mvc.entity.ProductCode;
+import com.web.mvc.entity.PurchaseOrder;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 import org.springframework.jdbc.core.RowMapper;
 
 public class RM {
@@ -78,6 +80,23 @@ public class RM {
         p.setAvailable(new Boolean(rs.getString("AVAILABLE") + "".trim()));
         p.setDescription(rs.getString("DESCRIPTION"));
         return p;
+    };
+    
+    static RowMapper<PurchaseOrder> purchaseOrderMapper = (ResultSet rs, int rowNum) -> {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        PurchaseOrder po = new PurchaseOrder();
+        po.setOrderNum(rs.getInt("ORDER_NUM"));
+        po.setCustomerId(rs.getInt("CUSTOMER_ID"));
+        po.setProductId(rs.getInt("PRODUCT_ID"));
+        po.setQuantity(rs.getInt("QUANTITY"));
+        po.setShippingCost(rs.getDouble("SHIPPING_COST"));
+        try {
+            po.setSalesDate(sdf.parse(rs.getString("SALES_DATE")));
+            po.setShippingDate(sdf.parse(rs.getString("SHIPPING_DATE")));
+        } catch (Exception e) {
+        }
+        po.setFreightCompany(rs.getString("FREIGHT_COMPANY"));
+        return po;
     };
     
 }
