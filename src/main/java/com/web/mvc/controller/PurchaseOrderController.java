@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/purchase_order")
-public class PurchaseOrderController {
+public class PurchaseOrderController extends BaseController {
 
     @Autowired
     @Qualifier("purchaseOrderDao")
