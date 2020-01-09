@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface PUViewDao {
     List<PUView> queryPUView();
-    List<PUView> queryPUViewByCustomerId(Integer customerId);
+    List<PUView> queryPUViewByProductCodeName(String productCodeName);
 }
