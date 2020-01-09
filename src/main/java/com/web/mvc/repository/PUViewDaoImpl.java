@@ -20,7 +20,9 @@ public class PUViewDaoImpl implements PUViewDao {
 
     @Override
     public List<PUView> queryPUViewByProductCodeName(String productCodeName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "SELECT * FROM PU_VIEW WHERE PRODUCT_CODE_NAME = ?";
+        List<PUView> list = jdbcTemplate.query(sql, new Object[]{productCodeName}, RM.puViewMapper);
+        return list;
     }
     
 }
