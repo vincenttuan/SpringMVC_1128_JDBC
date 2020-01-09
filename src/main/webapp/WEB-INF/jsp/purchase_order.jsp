@@ -38,7 +38,7 @@
                                     <table>
                                         <tr>
                                             <td valign="top" style="padding: 5px" nowrap> 
-                                                <form:input path="orderNum" placeholder="orderNum" /> <form:errors path="orderNum" style="text-color: red" /><p/>
+                                                <form:input path="orderNum" placeholder="orderNum" /> <form:errors path="orderNum" style="color: red" /><p/>
                                                 <form:select path="customerId" 
                                                              items="${list_c}" 
                                                              itemLabel="name" 
@@ -47,10 +47,10 @@
                                                              items="${list_p}" 
                                                              itemLabel="label" 
                                                              itemValue="productId"/><p/>
-                                                <form:input path="quantity" placeholder="quantity" /> <form:errors path="quantity" style="text-color: red" />
+                                                <form:input path="quantity" placeholder="quantity" /> <form:errors path="quantity" style="color: red" />
                                             </td>
                                             <td valign="top" style="padding: 5px" nowrap>
-                                                <form:input path="shippingCost" placeholder="shippingCost" /> <form:errors path="shippingCost" style="text-color: red" /><p/>
+                                                <form:input path="shippingCost" placeholder="shippingCost" /> <form:errors path="shippingCost" style="color: red" /><p/>
                                                 <form:input path="salesDate" placeholder="salesDate" type="date"  value="2020-01-09"/><p/>
                                                 <form:input path="shippingDate" placeholder="shippingDate" type="date"  value="2020-01-09"/><p/>
                                                 <form:input path="freightCompany" placeholder="freightCompany" value="demo"/>
