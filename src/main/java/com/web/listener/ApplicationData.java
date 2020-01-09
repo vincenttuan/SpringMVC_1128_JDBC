@@ -17,6 +17,7 @@ public class ApplicationData implements ServletContextListener {
         menus.put("manufacturer.jsp", new String[]{"mvc/manufacturer/input", "製造商"});
         menus.put("product.jsp", new String[]{"mvc/product/input", "商品資料"});
         menus.put("purchase_order.jsp", new String[]{"mvc/purchase_order/input", "採購訂單"});
+        menus.put("pu_view.jsp", new String[]{"mvc/pu_view/all", "訂單查詢"});
     }
 
     @Override
